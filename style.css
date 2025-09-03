@@ -28,6 +28,9 @@ body {
   .kana-grid h3 {
     background: none;
     color: black;
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
   }
   
   .kana p {
@@ -49,4 +52,9 @@ body {
     color: rgb(255, 181, 181);
     padding-bottom: 20px;
     z-index: 1;
+}
+
+.peach {
+    color: rgb(255, 181, 181);
+    display: inline;
 }
