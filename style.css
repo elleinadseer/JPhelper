@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+}
+
+.kana-grid {
+    display: grid;
+    grid-auto-flow: column;  /* fill top-to-bottom, then next column */
+    grid-template-rows: repeat(6, 80px);   /* 5 rows tall */
+    grid-template-columns: repeat(11, 80px); /* 10 columns wide */
+    gap: 12px;
+    margin: 20px auto;
+    width: max-content;
+  }
+  
+  .kana {
+    display: flex;
+    flex-direction: column;   /* stack children vertically */
+    justify-content: center;  /* vertical centering */
+    align-items: center;      /* horizontal centering */
+    background: black;
+    color: white;
+    font-size: 38px;    
+    border-radius: 12px;
+    padding: 10px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+
+  .kana-grid h3 {
+    background: none;
+    color: black;
+  }
+  
+  .kana p {
+    background: black;
+    margin: 0;       /* remove default paragraph spacing */
+    font-size: 1rem; /* smaller reading */
+    color: white;
+  }
+
+.small {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.kana .hira { z-index: 2; }
+
+.kana .dakuten {
+    position: absolute;
+    color: rgb(255, 181, 181);
+    padding-bottom: 20px;
+    z-index: 1;
+}
