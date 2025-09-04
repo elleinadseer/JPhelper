@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: rgb(245, 245, 245);
 }
 
 .kana-grid {
@@ -10,6 +10,21 @@ body {
     gap: 12px;
     margin: 20px auto;
     width: max-content;
+  }
+
+  .kana-yoon-grid {
+    display: grid;
+    grid-auto-flow: column;  /* fill top-to-bottom, then next column */
+    grid-template-rows: repeat(3, 80px);   /* 5 rows tall */
+    grid-template-columns: repeat(8, 80px); /* 10 columns wide */
+    gap: 12px;
+    margin: 20px auto;
+    width: max-content;
+    padding-right: 93px;
+  }
+
+  .kana-yoon-grid .kana {
+    font-size: 30px;
   }
   
   .kana {
@@ -25,7 +40,7 @@ body {
     font-family: "Noto Sans JP", sans-serif;
   }
 
-  .kana-grid h3 {
+  .kana-grid h3,  .kana-yoon-grid h3 {
     background: none;
     color: black;
     display: flex;
@@ -56,5 +71,10 @@ body {
 
 .peach {
     color: rgb(255, 181, 181);
+    display: inline;
+}
+
+.blue {
+    color: lightskyblue;
     display: inline;
 }
