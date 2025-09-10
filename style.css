@@ -1,80 +1,117 @@
-body {
-    background-color: rgb(245, 245, 245);
-}
+body {margin: 0px}
 
 .kana-grid {
-    display: grid;
-    grid-auto-flow: column;  /* fill top-to-bottom, then next column */
-    grid-template-rows: repeat(6, 80px);   /* 5 rows tall */
-    grid-template-columns: repeat(11, 80px); /* 10 columns wide */
-    gap: 12px;
-    margin: 20px auto;
-    width: max-content;
-  }
+  display: grid;
+  grid-auto-flow: column;  /* fill top-to-bottom, then next column */
+  grid-template-rows: repeat(6, 80px);   /* 5 rows tall */
+  grid-template-columns: repeat(11, 80px); /* 10 columns wide */
+  gap: 12px;
+  margin: 20px auto;
+  width: max-content;
+}
 
-  .kana-yoon-grid {
-    display: grid;
-    grid-auto-flow: column;  /* fill top-to-bottom, then next column */
-    grid-template-rows: repeat(3, 80px);   /* 5 rows tall */
-    grid-template-columns: repeat(8, 80px); /* 10 columns wide */
-    gap: 12px;
-    margin: 20px auto;
-    width: max-content;
-    padding-right: 93px;
-  }
+.kana-yoon-grid {
+  display: grid;
+  grid-auto-flow: column;  /* fill top-to-bottom, then next column */
+  grid-template-rows: repeat(3, 80px);   /* 5 rows tall */
+  grid-template-columns: repeat(8, 80px); /* 10 columns wide */
+  gap: 12px;
+  margin: 20px auto;
+  width: max-content;
+  padding-right: 93px;
+}
 
-  .kana-yoon-grid .kana {
-    font-size: 30px;
-  }
-  
-  .kana {
-    display: flex;
-    flex-direction: column;   /* stack children vertically */
-    justify-content: center;  /* vertical centering */
-    align-items: center;      /* horizontal centering */
-    background: black;
-    color: white;
-    font-size: 38px;    
-    border-radius: 12px;
-    padding: 10px;
-    font-family: "Noto Sans JP", sans-serif;
-  }
+.kana-yoon-grid .kana {
+  font-size: 30px;
+}
 
-  .kana-grid h3,  .kana-yoon-grid h3 {
-    background: none;
-    color: black;
-    display: flex;
-    flex-direction: row;
-    font-size: 30px;
-  }
-  
-  .kana p {
-    background: black;
-    margin: 0;       /* remove default paragraph spacing */
-    font-size: 1rem; /* smaller reading */
-    color: white;
-  }
+.kana {
+  display: flex;
+  flex-direction: column;   /* stack children vertically */
+  justify-content: center;  /* vertical centering */
+  align-items: center;      /* horizontal centering */
+  background: black;
+  color: white;
+  font-size: 38px;    
+  border-radius: 12px;
+  padding: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.kana-grid h3,  .kana-yoon-grid h3 {
+  background: none;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+}
+
+h3 { 
+  font-family: "Noto Sans JP", sans-serif; 
+  font-weight: bold;
+}
+
+.kana p {
+  background: black;
+  margin: 0;       /* remove default paragraph spacing */
+  font-size: 15px;
+  color: white;
+}
 
 .small {
-    font-size: 20px;
-    margin-bottom: 5px;
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .kana .hira { z-index: 2; }
 
-.kana .dakuten {
-    position: absolute;
-    color: rgb(255, 181, 181);
-    padding-bottom: 20px;
-    z-index: 1;
+.dakuten, .handaku {
+  display: none;
+}
+
+.dakuten {
+  color: rgb(255, 181, 181);
+}
+
+.handaku {color: lightskyblue}
+
+.handaku, .dakuten {
+  position: absolute;
+  padding-bottom: 20px;
+  z-index: 1;
 }
 
 .peach {
-    color: rgb(255, 181, 181);
-    display: inline;
+  color: rgb(255, 181, 181);
+  display: inline;
 }
 
 .blue {
-    color: lightskyblue;
-    display: inline;
+  color: lightskyblue;
+  display: inline;
+}
+
+.visualGuide {    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visualGuide img {
+  max-width: 1000px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: black;
+}
+
+nav span { cursor: pointer;}
+
+.topbar {
+  color: white;
+  margin: 0px;
+  padding: 10px 0px
 }

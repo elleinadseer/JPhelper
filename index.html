@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JPhelper</title>
+    <title>JPhelper hiragana</title>
 </head>
 <body>
+    <nav>
+        <h3 class="topbar">
+            <span id="dakutenShow" class="peach">Show Dakuten</span> | <span id="hanDakutenShow" class="blue">Show Han-Dakuten</span> | <a href="katakana.html">Katakana</a> | Kanji 
+        </h3>
+    </nav>
+
     <section class="kana-grid">
         <h3 class="kana"></h3>
         <h3 class="kana">A</h3>
@@ -22,37 +28,32 @@
         <div class="kana">い <p>i</p></div>
         
         <h3 class="kana">K <b class="peach">/G</b></h3>
-        <div class="kana"><span class="hira">か</span> <span class="dakuten">が</span> <p>ka</p></div>
-        <div class="kana"><span class="hira">く</span> <span class="dakuten">ぐ</span> <p>ku</p></div>
-        <div class="kana"><span class="hira">け</span> <span class="dakuten">げ</span> <p>ke</p></div>
-        <div class="kana"><span class="hira">こ</span> <span class="dakuten">ご</span> <p>ko</p></div>
-        <div class="kana"><span class="hira">き</span> <span class="dakuten">ぎ</span> <p>ki</p></div>
-        
+        <div class="kana"><span class="hira">か</span> <span class="dakuten">が</span> <p data-daku="ga">ka</p></div>
+        <div class="kana"><span class="hira">く</span> <span class="dakuten">ぐ</span> <p data-daku="gu">ku</p></div>
+        <div class="kana"><span class="hira">け</span> <span class="dakuten">げ</span> <p data-daku="ge">ke</p></div>
+        <div class="kana"><span class="hira">こ</span> <span class="dakuten">ご</span> <p data-daku="go">ko</p></div>
+        <div class="kana"><span class="hira">き</span> <span class="dakuten">ぎ</span> <p data-daku="gi">ki</p></div>
+
         <h3 class="kana">S <b class="peach">/Z</b></h3>
-        <div class="kana"><span class="hira">さ</span> <span class="dakuten">ざ</span> <p>sa</p></div>
-        <div class="kana"><span class="hira">す</span> <span class="dakuten">ず</span> <p>su</p></div>
-        <div class="kana"><span class="hira">せ</span> <span class="dakuten">ぜ</span> <p>se</p></div>
-        <div class="kana"><span class="hira">そ</span> <span class="dakuten">ぞ</span> <p>so</p></div>
-        <div class="kana"><span class="hira">し</span> <span class="dakuten">じ</span> <p>shi</p></div>
-        
+        <div class="kana"><span class="hira">さ</span> <span class="dakuten">ざ</span> <p data-daku="za">sa</p></div>
+        <div class="kana"><span class="hira">す</span> <span class="dakuten">ず</span> <p data-daku="zu">su</p></div>
+        <div class="kana"><span class="hira">せ</span> <span class="dakuten">ぜ</span> <p data-daku="ze">se</p></div>
+        <div class="kana"><span class="hira">そ</span> <span class="dakuten">ぞ</span> <p data-daku="zo">so</p></div>
+        <div class="kana"><span class="hira">し</span> <span class="dakuten">じ</span> <p data-daku="ji">shi</p></div>
+
         <h3 class="kana">T <b class="peach">/D</b></h3>
-        <div class="kana"><span class="hira">た</span> <span class="dakuten">だ</span> <p>ta</p></div>
-        <div class="kana"><span class="hira">つ</span> <span class="dakuten">づ</span> <p>tsu</p></div>
-        <div class="kana"><span class="hira">て</span> <span class="dakuten">で</span> <p>te</p></div>
-        <div class="kana"><span class="hira">と</span> <span class="dakuten">ど</span> <p>to</p></div>
-        <div class="kana"><span class="hira">ち</span> <span class="dakuten">ぢ</span> <p>chi</p></div>
-        
+        <div class="kana"><span class="hira">た</span> <span class="dakuten">だ</span> <p data-daku="da">ta</p></div>
+        <div class="kana"><span class="hira">つ</span> <span class="dakuten">づ</span> <p data-daku="zu (rare)">tsu</p></div>
+        <div class="kana"><span class="hira">て</span> <span class="dakuten">で</span> <p data-daku="de">te</p></div>
+        <div class="kana"><span class="hira">と</span> <span class="dakuten">ど</span> <p data-daku="do">to</p></div>
+        <div class="kana"><span class="hira">ち</span> <span class="dakuten">ぢ</span> <p data-daku="ji (rare)">chi</p></div>
+
         <h3 class="kana">H<b class="peach">/B</b><b class="blue">/P</b></h3>
-        <div class="kana"><span class="hira">は</span> <span data-han="ぱ" class="dakuten">ば</span> 
-            <!--<span class="handakuten">ぱ</span>--> <p data-han="pa">ha</p></div>
-        <div class="kana"><span class="hira">ふ</span> <span data-han="ぷ" class="dakuten">ぶ</span> 
-            <!--<span class="handakuten">ぷ</span>--> <p data-han="pu">fu</p></div>
-        <div class="kana"><span class="hira">へ</span> <span class="dakuten">べ</span> 
-            <!--<span class="handakuten">ぺ</span>--> <p>he</p></div>
-        <div class="kana"><span class="hira">ほ</span> <span class="dakuten">ぼ</span> 
-            <!--<span class="handakuten">ぽ</span>--> <p>ho</p></div>
-        <div class="kana"><span class="hira">ひ</span> <span class="dakuten">び</span> 
-            <!--<span class="handakuten">ぴ</span>--> <p>hi</p></div>
+        <div class="kana"><span class="hira">は</span> <span class="dakuten">ば</span> <span class="handaku">ぱ</span> <p data-daku="ba" data-handaku="pa">ha</p></div>
+        <div class="kana"><span class="hira">ふ</span> <span class="dakuten">ぶ</span> <span class="handaku">ぷ</span> <p data-daku="bu" data-handaku="pu">fu</p></div>
+        <div class="kana"><span class="hira">へ</span> <span class="dakuten">べ</span> <span class="handaku">ぺ</span> <p data-daku="be" data-handaku="pe">he</p></div>
+        <div class="kana"><span class="hira">ほ</span> <span class="dakuten">ぼ</span> <span class="handaku">ぽ</span> <p data-daku="bo" data-handaku="po">ho</p></div>
+        <div class="kana"><span class="hira">ひ</span> <span class="dakuten">び</span> <span class="handaku">ぴ</span> <p data-daku="bi" data-handaku="pi">hi</p></div>
 
         <h3 class="kana">N</h3>
         <div class="kana">な <p>na</p></div>
@@ -96,398 +97,42 @@
         <h3 class="kana">YU</h3>
         <h3 class="kana">YO</h3>
 
-        <div class="kana"><span class="hira">きゃ</span> <span class="dakuten">ぎゃ</span> <p>kya</p></div>
-        <div class="kana">きゅ <span class="dakuten">ぎゅ</span> <p>kyu</p></div>
-        <div class="kana">きょ <span class="dakuten">ぎょ</span><p>kyo</p></div>
-      
-        <div class="kana">しゃ <p>sha</p></div>
-        <div class="kana">しゅ <p>shu</p></div>
-        <div class="kana">しょ <p>sho</p></div>
-        <!--         <div class="kana">じゃ <p>ja</p></div>
-        <div class="kana">じゅ <p>ju</p></div>
-        <div class="kana">じょ <p>jo</p></div>   -->
-      
-        <div class="kana">ちゃ <p>cha</p></div>
-        <div class="kana">ちゅ <p>chu</p></div>
-        <div class="kana">ちょ <p>cho</p></div>
-      
-        <div class="kana">ひゃ <p>hya</p></div>
-        <div class="kana">ひゅ <p>hyu</p></div>
-        <div class="kana">ひょ <p>hyo</p></div>
-                <!-- <div class="kana">びゃ <p>bya</p></div>
-        <div class="kana">びゅ <p>byu</p></div>
-        <div class="kana">びょ <p>byo</p></div>
-      
-        <div class="kana">ぴゃ <p>pya</p></div>
-        <div class="kana">ぴゅ <p>pyu</p></div>
-        <div class="kana">ぴょ <p>pyo</p></div> -->
+<div class="kana"><span class="hira">きゃ</span> <span class="dakuten">ぎゃ</span> <p>kya</p></div>
+<div class="kana"><span class="hira">きゅ</span> <span class="dakuten">ぎゅ</span> <p>kyu</p></div>
+<div class="kana"><span class="hira">きょ</span> <span class="dakuten">ぎょ</span> <p>kyo</p></div>
 
-        <div class="kana">にゃ <p>nya</p></div>
-        <div class="kana">にゅ <p>nyu</p></div>
-        <div class="kana">にょ <p>nyo</p></div>
+<div class="kana"><span class="hira">しゃ</span> <span class="dakuten">じゃ</span> <p data-daku="ja">sha</p></div>
+<div class="kana"><span class="hira">しゅ</span> <span class="dakuten">じゅ</span> <p data-daku="ju">shu</p></div>
+<div class="kana"><span class="hira">しょ</span> <span class="dakuten">じょ</span> <p data-daku="jo">sho</p></div>
 
-        <div class="kana">みゃ <p>mya</p></div>
-        <div class="kana">みゅ <p>myu</p></div>
-        <div class="kana">みょ <p>myo</p></div>
+<div class="kana"><span class="hira">ちゃ</span> <p>cha</p></div>
+<div class="kana"><span class="hira">ちゅ</span> <p>chu</p></div>
+<div class="kana"><span class="hira">ちょ</span> <p>cho</p></div>
 
-        <div class="kana">りゃ <p>rya</p></div>
-        <div class="kana">りゅ <p>ryu</p></div>
-        <div class="kana">りょ <p>ryo</p></div>
-        
-    
+<div class="kana"><span class="hira">ひゃ</span> <span class="dakuten">びゃ</span> <span class="handaku">ぴゃ</span> <p data-daku="bya" data-handaku="pya">hya</p></div>
+<div class="kana"><span class="hira">ひゅ</span> <span class="dakuten">びゅ</span> <span class="handaku">ぴゅ</span> <p data-daku="byu" data-handaku="pyu">hyu</p></div>
+<div class="kana"><span class="hira">ひょ</span> <span class="dakuten">びょ</span> <span class="handaku">ぴょ</span> <p data-daku="byo" data-handaku="pyo">hyo</p></div>
+
+<div class="kana">にゃ <p>nya</p></div>
+<div class="kana">にゅ <p>nyu</p></div>
+<div class="kana">にょ <p>nyo</p></div>
+
+<div class="kana">みゃ <p>mya</p></div>
+<div class="kana">みゅ <p>myu</p></div>
+<div class="kana">みょ <p>myo</p></div>
+
+<div class="kana">りゃ <p>rya</p></div>
+<div class="kana">りゅ <p>ryu</p></div>
+<div class="kana">りょ <p>ryo</p></div>
+
     </section>
       
     <section class="visualGuide">
-        <div>
-            <h2>Visual Guide</h2>
+            <br>
+            <h3>HIRAGANA VISUAL GUIDE</h3>
             <img src="media\JP.png" alt="Visual Guide for Hiragana">
-        </div>
     </section>
-      
-    <h2>Hiragana</h2>
-
-    <h3>Vowels</h3>
-    あ a  
-    い i  
-    う u  
-    え e  
-    お o  
-
-    <h3>K</h3>
-    か ka  
-    き ki  
-    く ku  
-    け ke  
-    こ ko  
-
-    <h3>S</h3>
-    さ sa  
-    し shi  
-    す su  
-    せ se  
-    そ so  
-
-    <h3>T</h3>
-    た ta  
-    ち chi  
-    つ tsu  
-    て te  
-    と to  
-
-    <h3>N</h3>
-    な na  
-    に ni  
-    ぬ nu  
-    ね ne  
-    の no  
-
-    <h3>H</h3>
-    は ha  
-    ひ hi  
-    ふ fu  
-    へ he  
-    ほ ho  
-
-    <h3>M</h3>
-    ま ma  
-    み mi  
-    む mu  
-    め me  
-    も mo  
-
-    <h3>Y</h3>
-    や ya  
-    ゆ yu  
-    よ yo  
-
-    <h3>R</h3>
-    ら ra  
-    り ri  
-    る ru  
-    れ re  
-    ろ ro  
-
-    <h3>W</h3>
-    わ wa  
-    を wo (archaic)  
-    ん n  
-
-    <h2>Dakuten / Han-dakuten</h2>
-
-    <h3>G</h3>
-    が ga  
-    ぎ gi  
-    ぐ gu  
-    げ ge  
-    ご go  
-
-    <h3>Z</h3>
-    ざ za  
-    じ ji  
-    ず zu  
-    ぜ ze  
-    ぞ zo  
-
-    <h3>D</h3>
-    だ da  
-    ぢ ji (rare)  
-    づ zu (rare)  
-    で de  
-    ど do  
-
-    <h3>B</h3>
-    ば ba  
-    び bi  
-    ぶ bu  
-    べ be  
-    ぼ bo  
-
-    <h3>P (handakuten)</h3>
-    ぱ pa  
-    ぴ pi  
-    ぷ pu  
-    ぺ pe  
-    ぽ po  
-
     
-
-    <h2>Katakana</h2>
-
-    <h3>Vowels</h3>
-    ア a  
-    イ i  
-    ウ u  
-    エ e  
-    オ o  
-
-    <h3>K</h3>
-    カ ka  
-    キ ki  
-    ク ku  
-    ケ ke  
-    コ ko  
-
-    <h3>S</h3>
-    サ sa  
-    シ shi  
-    ス su  
-    セ se  
-    ソ so  
-
-    <h3>T</h3>
-    タ ta  
-    チ chi  
-    ツ tsu  
-    テ te  
-    ト to  
-
-    <h3>N</h3>
-    ナ na  
-    ニ ni  
-    ヌ nu  
-    ネ ne  
-    ノ no  
-
-    <h3>H</h3>
-    ハ ha  
-    ヒ hi  
-    フ fu  
-    ヘ he  
-    ホ ho  
-
-    <h3>M</h3>
-    マ ma  
-    ミ mi  
-    ム mu  
-    メ me  
-    モ mo  
-
-    <h3>Y</h3>
-    ヤ ya  
-    ユ yu  
-    ヨ yo  
-
-    <h3>R</h3>
-    ラ ra  
-    リ ri  
-    ル ru  
-    レ re  
-    ロ ro  
-
-    <h3>W</h3>
-    ワ wa  
-    ヲ wo (archaic)  
-    ン n  
-
-    <h2>Dakuten / Han-dakuten</h2>
-
-    <h3>G</h3>
-    ガ ga  
-    ギ gi  
-    グ gu  
-    ゲ ge  
-    ゴ go  
-
-    <h3>Z</h3>
-    ザ za  
-    ジ ji  
-    ズ zu  
-    ゼ ze  
-    ゾ zo  
-
-    <h3>D</h3>
-    ダ da  
-    ヂ ji (rare)  
-    ヅ zu (rare)  
-    デ de  
-    ド do  
-
-    <h3>B</h3>
-    バ ba  
-    ビ bi  
-    ブ bu  
-    ベ be  
-    ボ bo  
-
-    <h3>P (handakuten)</h3>
-    パ pa  
-    ピ pi  
-    プ pu  
-    ペ pe  
-    ポ po  
-
-    <h2>Combinations (Yōon)</h2>
-
-    <h3>K + Y</h3>
-    キャ kya  
-    キュ kyu  
-    キョ kyo  
-
-    <h3>S + Y</h3>
-    シャ sha  
-    シュ shu  
-    ショ sho  
-
-    <h3>T + Y</h3>
-    チャ cha  
-    チュ chu  
-    チョ cho  
-
-    <h3>N + Y</h3>
-    ニャ nya  
-    ニュ nyu  
-    ニョ nyo  
-
-    <h3>H + Y</h3>
-    ヒャ hya  
-    ヒュ hyu  
-    ヒョ hyo  
-
-    <h3>M + Y</h3>
-    ミャ mya  
-    ミュ myu  
-    ミョ myo  
-
-    <h3>R + Y</h3>
-    リャ rya  
-    リュ ryu  
-    リョ ryo  
-
-    <h3>G + Y</h3>
-    ギャ gya  
-    ギュ gyu  
-    ギョ gyo  
-
-    <h3>J (from Z + Y)</h3>
-    ジャ ja  
-    ジュ ju  
-    ジョ jo  
-
-    <h3>D + Y</h3>
-    ヂャ ja (rare)  
-    ヂュ ju (rare)  
-    ヂョ jo (rare)  
-
-    <h3>B + Y</h3>
-    ビャ bya  
-    ビュ byu  
-    ビョ byo  
-
-    <h3>P + Y</h3>
-    ピャ pya  
-    ピュ pyu  
-    ピョ pyo  
-
-    <h2>Extended Katakana (for foreign sounds)</h2>
-
-    <h3>Vowels</h3>
-    イェ ye  
-    ウィ wi  
-    ウェ we  
-    ウォ wo  
-
-    <h3>K-sounds</h3>
-    クァ kwa  
-    クィ kwi  
-    クェ kwe  
-    クォ kwo  
-
-    <h3>S-sounds</h3>
-    シェ she  
-    スィ si  
-
-    <h3>T-sounds</h3>
-    ティ ti  
-    トゥ tu  
-    チェ che  
-    ツァ tsa  
-    ツィ tsi  
-    ツェ tse  
-    ツォ tso  
-
-    <h3>N-sounds</h3>
-    ニェ nye  
-
-    <h3>H/F-sounds</h3>
-    ファ fa  
-    フィ fi  
-    フェ fe  
-    フォ fo  
-    フュ fyu  
-
-    <h3>M-sounds</h3>
-    ミェ mye  
-
-    <h3>R-sounds</h3>
-    リェ rye  
-
-    <h3>G-sounds</h3>
-    ギェ gye  
-
-    <h3>J-sounds</h3>
-    ジェ je  
-
-    <h3>D-sounds</h3>
-    ディ di  
-    ドゥ du  
-    ヂェ dje (very rare)  
-
-    <h3>B-sounds</h3>
-    ビェ bye  
-
-    <h3>P-sounds</h3>
-    ピェ pye  
-
-    <h3>W-sounds</h3>
-    ウァ wa (used rarely)  
-
-    <h3>V-sounds</h3>
-    ヴァ va  
-    ヴィ vi  
-    ヴ vu  
-    ヴェ ve  
-    ヴォ vo  
-    ヴュ vyu  
 </body>
 
 <link rel="stylesheet" href="style.css">
