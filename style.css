@@ -115,3 +115,37 @@ nav span { cursor: pointer;}
   margin: 0px;
   padding: 10px 0px
 }
+
+.container {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 250px;
+}
+
+.phrase-box {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  min-width: 250px;
+  min-height: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #0077cc;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+.white {color: white;}

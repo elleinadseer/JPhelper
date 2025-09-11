@@ -46,3 +46,32 @@ document.querySelectorAll(".kana p").forEach(p => {
     }
   });
   */
+
+
+  const phrases = [
+"hat TSU",
+"hat shortTSU",
+"hori crossTSU",
+"vertTSU bend",
+"caneTSU short \\ ",
+
+"horiC",
+"short c",
+"hori ku c",
+"hori \\c",
+"hori x2 \\c",
+
+"NO",
+"\\ NO",
+"\\ NOfish ",
+"hori cross NO",
+"hori crossLoopTSU flick ",
+];
+
+const phraseBox = document.getElementById("phraseBox");
+const nextBtn = document.getElementById("nextBtn");
+
+nextBtn.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * phrases.length);
+  phraseBox.textContent = phrases[randomIndex];
+});
