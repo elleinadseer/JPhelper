@@ -133,13 +133,17 @@
             <img src="media\JP.png" alt="Visual Guide for Hiragana">
     </section>
     
-    
-  <div class="container">
+
+  <section class="container">
     <h1>Random Phrase</h1>
     <div id="phraseBox" class="phrase-box">Click the button to start</div>
-    <button id="nextBtn">Next Phrase</button>
-  </div>
+    <span class="buttons">  <button id="clearBtn">Clear</button>  <button id="nextBtn">Next Phrase</button>
+          <button id="getAnswerBtn">Get Answer</button> <div id="answerBox" style="display: none;"></div> </span>
 
+        <div class="canvas-wrapper">
+            <canvas id="draw" width="350" height="350"></canvas>
+        </div>
+    </section>
 
 </body>
 

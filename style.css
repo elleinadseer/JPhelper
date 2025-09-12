@@ -123,16 +123,15 @@ nav span { cursor: pointer;}
   align-items: center;
   text-align: center;
   flex-direction: column;
-  padding: 250px;
+  padding-bottom: 250px;
 }
 
 .phrase-box {
-  margin: 20px 0;
+  margin-bottom: 10px;
   padding: 15px;
   border: 1px solid #ddd;
-  border-radius: 6px;
   min-width: 250px;
-  min-height: 40px;
+  font-size: 20px;
 }
 
 button {
@@ -142,10 +141,45 @@ button {
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
+  margin: 10px
 }
 
 button:hover {
   background: #005fa3;
 }
 
-.white {color: white;}
+.canvas-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#draw {
+  border: 2px solid grey;
+  display: block;
+  background: #fff;
+}
+
+.canvas-wrapper::before,
+.canvas-wrapper::after {
+  content: "";
+  position: absolute;
+  background: grey;
+  pointer-events: none; /* makes sure you can still draw underneath */
+}
+
+.canvas-wrapper::before { /* vertical center line */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+}
+
+.canvas-wrapper::after { /* horizontal center line */
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  transform: translateY(-50%);
+}
