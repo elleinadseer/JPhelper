@@ -1,32 +1,5 @@
 
-function switchTo(type) {
-  document.querySelectorAll("div[data-daku]").forEach(div => {
-    // Update the div’s text node only if that data-* exists
-    if (div.dataset[type] && div.firstChild.nodeType === Node.TEXT_NODE) {
-      div.firstChild.nodeValue = div.dataset[type];
-    }
 
-    // Update the <p> only if that data-* exists
-    const p = div.querySelector("p[data-daku]");
-    if (p && p.dataset[type]) {
-      p.textContent = p.dataset[type];
-    }
-  });
-}
-
-document.getElementById("dakuSwitch").addEventListener("click", () => {
-  switchTo("daku");
-});
-
-document.getElementById("hanSwitch").addEventListener("click", () => {
-  switchTo("han");
-});
-
-
-
-
-
-/*
 // store base values from <p> before any toggling happens
 document.querySelectorAll(".kana p").forEach(p => {
   p.dataset.base = p.textContent.trim();
@@ -55,62 +28,6 @@ document.querySelectorAll(".kana p").forEach(p => {
   }
 });
 });
-
-
-
-
-/*
-
-  const phrases = [
-"hat TSU",
-"hat shortTSU",
-"hori crossTSU",
-"vertTSU bend",
-"caneTSU short \\ ",
-
-"horiC",
-"short c",
-"hori ku c",
-"hori crossC",
-"hori x2 crossC",
-
-"NO",
-"\\ NO",
-"\\ NOfish ",
-"hori cross NO",
-"hori crossLoopTSU flick ",
-
-  "Zc",
-  "Ztsu",
-  "ZtsuLoop",
-  "loopedZ bend",
-
-  "hat 7leftCorner",
-  "vert 7tsu",
-  "vert 7tsuFish",
-  "vert 7nn",
-
-  "hori loopedBend",
-  "hori loopedCorner flick",
-  "hori reverseHook leftCorner",
-
-  "hori fellHook",
-  "kook hori fellHook",
-  "cross hori fellHook",
-  "cross flick fish",
-  "// rightCorner flick",
-
-  "hook",
-  "hook tick",
-  "hook bend",
-  "vert x2 hook",
-
-  "hook crossBend",
-  "hook crossFish",
-  "hook TcrossFish",
-  "hori x2 vertFish",
-  "hori x2 hook"
-];
 
 
 const phrases = [
@@ -271,5 +188,3 @@ getAnswerBtn.addEventListener("click", () => {
 // Init
 refillPool();
 showPhrase(nextPhrase());
-
-*/
