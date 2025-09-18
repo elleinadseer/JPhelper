@@ -6,37 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JPhelper katakana</title>
 </head>
-<body>
+<body> 
+    <div id="dakuSwitch">Switch to dakuten</div>
+    <div id="hanSwitch">Switch to handakuten</div>
+
     
-    <h2>Katakana</h2>
+    <section class="kataContainer">
+        <b></b>    <b></b>                <h3>K/G</h3>                                        <h3>S/Z</h3>                                         <h3>T/D</h3>                                        <h3>H/B/P</h3>
+        <h3>A</h3> <div>ア <p>a</p></div> <div data-daku="ガ">カ<p data-daku="ga">ka</p></div> <div data-daku="ザ">サ<p data-daku="za">sa</p></div> <div data-daku="ダ">タ<p data-daku="da">ta</p></div> <div data-daku="バ" data-han="パ">ハ<p data-daku="ba" data-han="pa">ha</p></div>  
+        <h3>I</h3> <div>イ <p>i</p></div> <div data-daku="ギ">キ<p data-daku="gi">ki</p></div> <div data-daku="ジ">シ<p data-daku="ji">shi</p></div><div>チ<p>chi</p></div>                              <div data-daku="ビ" data-han="ピ">ヒ<p data-daku="bi" data-han="pi">hi</p></div>
+        <h3>U</h3> <div>ウ <p>u</p></div> <div data-daku="グ">ク<p data-daku="gu">ku</p></div> <div data-daku="ズ">ス<p data-daku="zu">su</p></div> <div>ツ<p>tsu</p></div>                              <div data-daku="ブ" data-han="プ">フ<p data-daku="bu" data-han="pu">fu</p></div>
+        <h3>E</h3> <div>エ <p>e</p></div> <div data-daku="ゲ">ケ<p data-daku="ge">ke</p></div> <div data-daku="ゼ">セ<p data-daku="ze">se</p></div> <div data-daku="デ">テ<p data-daku="de">te</p></div> <div data-daku="ベ" data-han="ペ">ヘ<p data-daku="be" data-han="pe">he</p></div>
+        <h3>O</h3> <div>オ <p>o</p></div> <div data-daku="ゴ">コ<p data-daku="go">ko</p></div> <div data-daku="ゾ">ソ<p data-daku="zo">so</p></div> <div data-daku="ド">ト<p data-daku="do">to</p></div> <div data-daku="ボ" data-han="ポ">ホ<p data-daku="bo" data-han="po">ho</p></div>
+    </section>
 
-    <h3>Vowels</h3>
-    ア a  
-    イ i  
-    ウ u  
-    エ e  
-    オ o  
-
-    <h3>K</h3>
-    カ ka  
-    キ ki  
-    ク ku  
-    ケ ke  
-    コ ko  
-
-    <h3>S</h3>
-    サ sa  
-    シ shi  
-    ス su  
-    セ se  
-    ソ so  
-
-    <h3>T</h3>
-    タ ta  
-    チ chi  
-    ツ tsu  
-    テ te  
-    ト to  
+ 
 
     <h3>N</h3>
     ナ na  
@@ -44,13 +28,6 @@
     ヌ nu  
     ネ ne  
     ノ no  
-
-    <h3>H</h3>
-    ハ ha  
-    ヒ hi  
-    フ fu  
-    ヘ he  
-    ホ ho  
 
     <h3>M</h3>
     マ ma  
@@ -75,43 +52,6 @@
     ワ wa  
     ヲ wo (archaic)  
     ン n  
-
-    <h2>Dakuten / Han-dakuten</h2>
-
-    <h3>G</h3>
-    ガ ga  
-    ギ gi  
-    グ gu  
-    ゲ ge  
-    ゴ go  
-
-    <h3>Z</h3>
-    ザ za  
-    ジ ji  
-    ズ zu  
-    ゼ ze  
-    ゾ zo  
-
-    <h3>D</h3>
-    ダ da  
-    ヂ ji (rare)  
-    ヅ zu (rare)  
-    デ de  
-    ド do  
-
-    <h3>B</h3>
-    バ ba  
-    ビ bi  
-    ブ bu  
-    ベ be  
-    ボ bo  
-
-    <h3>P (handakuten)</h3>
-    パ pa  
-    ピ pi  
-    プ pu  
-    ペ pe  
-    ポ po  
 
     <h2>Combinations (Yōon)</h2>
 
@@ -247,4 +187,6 @@
     ヴュ vyu  
 
 </body>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </html>

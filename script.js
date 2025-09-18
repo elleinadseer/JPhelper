@@ -1,3 +1,32 @@
+
+function switchTo(type) {
+  document.querySelectorAll("div[data-daku]").forEach(div => {
+    // Update the div’s text node only if that data-* exists
+    if (div.dataset[type] && div.firstChild.nodeType === Node.TEXT_NODE) {
+      div.firstChild.nodeValue = div.dataset[type];
+    }
+
+    // Update the <p> only if that data-* exists
+    const p = div.querySelector("p[data-daku]");
+    if (p && p.dataset[type]) {
+      p.textContent = p.dataset[type];
+    }
+  });
+}
+
+document.getElementById("dakuSwitch").addEventListener("click", () => {
+  switchTo("daku");
+});
+
+document.getElementById("hanSwitch").addEventListener("click", () => {
+  switchTo("han");
+});
+
+
+
+
+
+/*
 // store base values from <p> before any toggling happens
 document.querySelectorAll(".kana p").forEach(p => {
   p.dataset.base = p.textContent.trim();
@@ -82,7 +111,6 @@ document.querySelectorAll(".kana p").forEach(p => {
   "hori x2 vertFish",
   "hori x2 hook"
 ];
-*/
 
 
 const phrases = [
@@ -90,14 +118,14 @@ const phrases = [
   { phrase: "hat TSU", outline: "う", answer: "U" },
   { phrase: "hat vertTSU", outline: "ら", answer: "RA" },
   { phrase: "hori crossTSU", outline: "ち", answer: "CHI" },
-  { phrase: "vertTSU bend", outline: "ゆ", answer: "YU" },
+  { phrase: "vertTSU )", outline: "ゆ", answer: "YU" },
   { phrase: "caneTSU short \\", outline: "や", answer: "YA" },
 
   { phrase: "horiC", outline: "て", answer: "TE" },
   { phrase: "short c", outline: "と", answer: "TO" },
-  { phrase: "hori ku c", outline: "を", answer: "WO" },
+  { phrase: "hori /ku c", outline: "を", answer: "WO" },
   { phrase: "hori crossC", outline: "さ", answer: "SA" },
-  { phrase: "hori x2 crossC", outline: "き", answer: "KI" },
+  { phrase: "hori x2 \\C", outline: "き", answer: "KI" },
 
   { phrase: "NO", outline: "の", answer: "NO" },
   { phrase: "\\ NO", outline: "め", answer: "ME" },
@@ -108,7 +136,7 @@ const phrases = [
   { phrase: "Zc", outline: "そ", answer: "SO" },
   { phrase: "Ztsu", outline: "ろ", answer: "RO" },
   { phrase: "ZtsuLoop", outline: "る", answer: "RU" },
-  { phrase: "Zlooped bend", outline: "み", answer: "MI" },
+  { phrase: "Zlooped )", outline: "み", answer: "MI" },
 
   { phrase: "hat 7rest", outline: "え", answer: "E" },
   { phrase: "vert 7tsu", outline: "わ", answer: "WA" },
@@ -123,7 +151,7 @@ const phrases = [
   { phrase: "hook hori fellHook", outline: "に", answer: "NI" },
   { phrase: "cross hori fellHook", outline: "た", answer: "TA" },
   { phrase: "cross flick fish", outline: "な", answer: "NA" },
-  { phrase: "/ cliff flick", outline: "か", answer: "KA" },
+  { phrase: "cross cliff flick", outline: "か", answer: "KA" },
 
   { phrase: "hook", outline: "し", answer: "SHI" },
   { phrase: "hook flick", outline: "い", answer: "I" },
@@ -144,9 +172,18 @@ const canvas = document.getElementById("draw");
 const ctx = canvas.getContext("2d");
 const clearBtn = document.getElementById("clearBtn");
 const nextBtn = document.getElementById("nextBtn");
+const hiraganaTest = document.getElementById("hiraganaTest");
 
 let pool = [];
 let currentItem = null;
+let hiraganaMode = false; // default is hint mode
+
+// Toggle game mode when clicking the Hiragana Test div
+hiraganaTest.addEventListener("click", () => {
+  hiraganaMode = !hiraganaMode;
+  hiraganaTest.style.fontWeight = hiraganaMode ? "bold" : "normal"; // optional visual feedback
+  if (currentItem) showPhrase(currentItem); // refresh display
+});
 
 // Shuffle helper
 function shuffle(arr) {
@@ -198,12 +235,18 @@ clearBtn.addEventListener("click", () => {
   }
 });
 
-// Show phrase (canvas stays blank until “Get Answer”)
+
+// Modified showPhrase depending on mode
 function showPhrase(item) {
   currentItem = item;
-  phraseBox.textContent = item.phrase;
   answerBox.style.display = "none";
-  ctx.clearRect(0, 0, canvas.width, canvas.height); // start blank
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  if (hiraganaMode) {
+    phraseBox.textContent = item.answer; // show romaji straight away
+  } else {
+    phraseBox.textContent = item.phrase; // show hint
+  }
 }
 
 // Next phrase
@@ -211,13 +254,22 @@ nextBtn.addEventListener("click", () => {
   showPhrase(nextPhrase());
 });
 
+// Modified Get Answer button
 getAnswerBtn.addEventListener("click", () => {
   if (currentItem) {
-    phraseBox.textContent = currentItem.answer;  // replace phrase with answer
-    drawOutline(currentItem.outline);             // keep the shadow if needed
+    if (hiraganaMode) {
+      // In hiragana mode: keep showing answer text, just draw outline
+      drawOutline(currentItem.outline);
+    } else {
+      // In normal mode: switch to answer + draw outline
+      phraseBox.textContent = currentItem.answer;
+      drawOutline(currentItem.outline);
+    }
   }
 });
 
 // Init
 refillPool();
 showPhrase(nextPhrase());
+
+*/
